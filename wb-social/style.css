@@ -1,0 +1,153 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 18px; /* Aumentado el tamaño de la fuente */
+    background-color: #ffffff;
+    color: #502050;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 50px; /* Aumentado */
+    background-image: url('./images/bg-pattern-bottom-desktop.svg'), url('./images/bg-pattern-top-desktop.svg');
+    background-position: bottom left, top right;
+    background-size: cover, cover;
+}
+
+.intro {
+    position: absolute;
+    left: 300px; /* Ajustado más a la derecha */
+    top: 50px; /* Ajustado más abajo */
+    color: #937b92;
+    text-align: left;
+}
+
+.intro h1 {
+    font-size: 3rem; /* Aumentado */
+    margin-bottom: 1.5rem; /* Aumentado */
+    line-height: 1.2;
+    color: #502050;
+}
+
+.intro p {
+    margin-bottom: 2.5rem; /* Aumentado */
+    line-height: 1.6; /* Aumentado */
+}
+
+.reviews {
+    position: absolute;
+    top: 70px; /* Ajustado más abajo */
+    right: 500px; /* Mover más a la izquierda */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: rotate(-10deg); /* Rotar el contenedor de reseñas */
+    transform-origin: top right; /* Ajustar el origen de la transformación */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+}
+
+.review {
+    background-color: #f7f2f7;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transform: rotate(10deg); /* Mantén la rotación general si lo deseas */
+    z-index: 2;
+    position: relative; /* Necesario para aplicar transformaciones relativas */
+}
+
+.review:nth-child(1) {
+    transform: rotate(10deg) translatex(0px); /* Sin desplazamiento */
+}
+
+.review:nth-child(2) {
+    transform: rotate(10deg) translatex(40px); /* Ajusta el desplazamiento horizontal */
+}
+
+.review:nth-child(3) {
+    transform: rotate(10deg) translatex(70px); /* Ajusta el desplazamiento horizontal */
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    margin-top: 400px; /* Aumentado */
+}
+
+.testimonial {
+    display: flex;
+    align-items: flex-start;
+    background-color: #502050;
+    border-radius: 10px; /* Aumentado */
+    padding: 2rem; /* Aumentado */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Aumentado */
+    color: white;
+    text-align: left;
+    max-width: 350px; /* Aumentado */
+    margin-left: 60px; /* Aumentado */
+    margin-bottom: 450px; /* Aumentado */
+    transform: translateY(var(--offset, 0px));
+}
+
+.testimonials .testimonial:nth-child(1) {
+    --offset: 0px;
+}
+
+.testimonials .testimonial:nth-child(2) {
+    --offset: 30px; /* Aumentado */
+}
+
+.testimonials .testimonial:nth-child(3) {
+    --offset: 60px; /* Aumentado */
+}
+
+.testimonial img.profile-pic {
+    width: 60px; /* Aumentado */
+    height: 60px; /* Aumentado */
+    border-radius: 50%;
+    margin-right: 1.5rem; /* Añadido espacio entre imagen y texto */
+}
+
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-text h3 {
+    margin: 0;
+}
+
+.testimonial-text .prosa {
+    margin: 0;
+    font-size: 0.9rem; /* Ajuste opcional del tamaño de la fuente */
+    color: #ee68a4; /* Color Soft Pink */
+}
+
+.stars {
+    display: inline-block; 
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.stars::before {
+    content: "★ ★ ★ ★ ★\00a0\00a0\00a0\00a0";
+    font-size: 18px; /* Aumentado */
+    color: #f0ad4e;
+    display: inline; /* Cambiar a inline para que se alinee con el texto */
+}
+
+.prosa {
+    color: #ee68a4; /* Color Soft Pink */
+}
